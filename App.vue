@@ -20,6 +20,7 @@
 
 	/* 字体图标库 */
 	@import url("@/common/css/iconfont.css");
+	@import url("@/iconfont/iconfont.css");
 
 	/* 动画库 */
 	@import url("@/common/css/animate.min.css");

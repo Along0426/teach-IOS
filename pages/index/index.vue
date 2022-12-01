@@ -4,7 +4,7 @@
 		<view class="content container">
 			首页
 		</view>
-		<view class="iconfont icon-search"></view>
+		<view class="iconfont icon-wodeyouhuiquan"></view>
 		<view class="animate__animated animate__zoomIn">1111</view>
 	</view>
 </template>
