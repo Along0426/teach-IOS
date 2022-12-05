@@ -3,10 +3,10 @@
 		<image class="img" src="/static/头像.png" mode=""></image>
 		<view class="text">
 			<view class="loginText" @click="handleSkip">
-				{{loginFlag?"立即登录":userData.name}}
+				{{loginFlag?"立即登录":userInfo.name}}
 			</view>
 			<view class="title">
-				{{loginFlag?"登录解锁更多功能":userData.intro===""?"暂无描述":userData.intro}}
+				{{loginFlag?"登录解锁更多功能":userInfo.intro===""?"暂无描述":userInfo.intro}}
 			</view>
 		</view>
 		<view class="vip" v-if="!loginFlag">
@@ -21,7 +21,7 @@
 	export default {
 		props: {
 			// 用户信息
-			userData: {
+			userInfo: {
 				type: Object,
 				default: () => ({
 					name: "ALong",

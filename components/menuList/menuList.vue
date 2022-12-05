@@ -57,13 +57,14 @@
 
 <style lang="scss" scoped>
 	.menu {
-		width: 100%;
+		width: calc(100% - 30px);
 		height: 60px;
 		line-height: 60px;
 		display: flex;
 		align-items: center;
 		border-bottom: 1px solid #f9f9f9;
 		box-sizing: border-box;
+		margin: 0 15px;
 
 		.icon {
 			font-size: 18px;
@@ -72,7 +73,7 @@
 		}
 
 		.text {
-			font-size: 13px;
+			font-size: 15px;
 			color: #35393e;
 		}
 

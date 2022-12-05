@@ -4,8 +4,8 @@
 		<view class="content container">
 			首页
 		</view>
-		<view class="iconfont icon-wodeyouhuiquan"></view>
-		<view class="animate__animated animate__zoomIn">1111</view>
+		<text class="iconfont icon-info"></text>
+		<view class="iconfont icon-yonghu"></view>
 	</view>
 </template>
 

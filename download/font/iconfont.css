@@ -1,9 +1,8 @@
 @font-face {
-	font-family: "iconfont";
-	/* Project id 3803547 */
-	src: url('@/iconfont/iconfont.woff2?t=1669892579288') format('woff2'),
-		url('@/iconfont/iconfont.woff?t=1669892579288') format('woff'),
-		url('@/iconfont/iconfont.ttf?t=1669892579288') format('truetype');
+	font-family: 'iconfont';
+	src: url('@/download/font/iconfont.woff2?t=1669965282425') format('woff2'),
+		url('@/download/font/iconfont.woff?t=1669965282425') format('woff'),
+		url('@/download/font/iconfont.ttf?t=1669965282425') format('truetype');
 }
 
 .iconfont {
@@ -12,6 +11,18 @@
 	font-style: normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weixin:before {
+	content: "\e600";
+}
+
+.icon-suo:before {
+	content: "\e607";
+}
+
+.icon-yonghu:before {
+	content: "\e624";
 }
 
 .icon-shezhi:before {

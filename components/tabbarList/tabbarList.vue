@@ -75,7 +75,7 @@
 
 		.text {
 			font-size: 13px;
-			color: #202830;
+			color: #41474e;
 		}
 	}
 </style>

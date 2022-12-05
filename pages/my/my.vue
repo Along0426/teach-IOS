@@ -1,12 +1,9 @@
 <template>
 	<view class="my">
-		<view class="bg1">
-		</view>
-		<view class="bg2">
-		</view>
+		<view class="bg"></view>
 		<view class="content">
 			<!-- 用户信息组件 -->
-			<my-login :loginFlag="loginFlag"></my-login>
+			<my-login :loginFlag="loginFlag" :userInfo="userInfo"></my-login>
 
 			<!-- tabbar 组件 -->
 			<my-tabbar :tabList="tabList" :loginFlag="loginFlag"></my-tabbar>
@@ -28,6 +25,9 @@
 	import tabList from "@/config/my-tabbar-list.js"
 	// 引入菜单组件数据
 	import menuList from '@/config/my-menu-list.js'
+	// 导入vuex
+	import store from '@/store/index.js'
+	import Key from '@/config/KEY.js'
 
 	export default {
 		data() {
@@ -37,7 +37,14 @@
 				// 菜单数据
 				menuList: menuList(),
 				// false 用户已登陆
-				loginFlag: true
+				loginFlag: true,
+				// 用户名
+				userInfo: {
+					name: "",
+					intro: "",
+					vipFlag: true,
+					id: 1
+				}
 			};
 		},
 		components: {
@@ -45,7 +52,17 @@
 			myTabbar,
 			myMenu
 		},
-		onLoad() {}
+		onLoad() {
+			if (uni.getStorageSync(Key.TOKEN_KEY)) {
+				this.loginFlag = false
+				this.userInfo.name = store.state.username
+			}
+		},
+		onLaunch() {
+			uni.switchTab({
+				url: "/pages/my/my"
+			})
+		}
 	}
 </script>
 
@@ -60,16 +77,10 @@
 			box-sizing: border-box;
 		}
 
-		.bg1 {
-			height: 125px;
+		.bg {
+			height: 150px;
 			background-color: #5ccc84;
-		}
-
-		.bg2 {
-			margin-top: -1px;
-			height: 25px;
-			background-color: #5ccc84;
-			border-radius: 0 0 180px 180px;
+			border-radius: 0 0 20px 20px;
 		}
 	}
 </style>

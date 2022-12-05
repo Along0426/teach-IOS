@@ -29,8 +29,17 @@
 		}, {
 			"path": "pages/login/login",
 			"style": {
-				"navigationBarTitleText": "登录",
-				"enablePullDownRefresh": false
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#84f4ba",
+				"h5": {
+					"titleNView": false
+				},
+				"app-plus": {
+					"titleNView": {
+						"backgroundImage": "linear-gradient(to right, #85f7b6, #8ed6ef)"
+					}
+				}
 			}
 
 		}, {
@@ -80,6 +89,23 @@
 			"style": {
 				"navigationBarTitleText": "常见问题",
 				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/alterCode/alterCode",
+			"style": {
+				"navigationBarTitleText": "修改密码",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/bind-phone/bind-phone",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"h5": {
+					"titleNView": false
+				}
 			}
 
 		}
